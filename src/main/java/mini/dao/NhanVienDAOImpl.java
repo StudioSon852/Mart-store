@@ -2,7 +2,6 @@ package mini.dao;
 
 
 import java.util.List;
-import mini.dao.NhanVienDAO;
 import mini.entity.NhanVien;
 import mini.util.XJdbc;
 import mini.util.XQuery;

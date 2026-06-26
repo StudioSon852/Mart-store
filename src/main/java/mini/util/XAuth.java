@@ -12,10 +12,10 @@ import mini.entity.NhanVien;
  */
 public class XAuth {
     public static NhanVien user = NhanVien.builder()
-    .maNV("user1@gmail.com")
+    .maNV("admin@gmail.com")
     .password("123")
     .enabled(true)
-    .fullname("Nguyen Huy Gia Anh")
+    .fullname("Admin")
     .manager(true)
     .build(); // biến user này sẽ được thay thế sau khi đăng nhập
 }
