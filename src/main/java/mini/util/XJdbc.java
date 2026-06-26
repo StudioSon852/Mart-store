@@ -9,7 +9,7 @@ import java.sql.SQLException;
 
 public class XJdbc {
 
-    private static Connection connection;
+    private static Connection connectio;
 
     
     public static Connection openConnection() {
@@ -20,19 +20,19 @@ public class XJdbc {
         try {
             if (!XJdbc.isReady()) {
                 Class.forName(driver);
-                connection = DriverManager.getConnection(dburl, username, password);
+                connectio = DriverManager.getConnection(dburl, username, password);
             }
         } catch (ClassNotFoundException | SQLException e) {
             throw new RuntimeException(e);
         }
-        return connection;
+        return connectio;
     }
 
     
     public static void closeConnection() {
         try {
             if (XJdbc.isReady()) {
-                connection.close();
+                connectio.close();
             }
         } catch (SQLException e) {
             throw new RuntimeException(e);
@@ -42,7 +42,7 @@ public class XJdbc {
 
     public static boolean isReady() {
         try {
-            return (connection != null && !connection.isClosed());
+            return (connectio != null && !connectio.isClosed());
         } catch (SQLException e) {
             throw new RuntimeException(e);
         }
