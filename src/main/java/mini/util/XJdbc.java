@@ -114,6 +114,6 @@ public class XJdbc {
     private static void demo3() {
         String sql = "DELETE FROM SanPham WHERE giaBan < ?";
         var count = XJdbc.executeUpdate(sql, 0.0); 
-        // count: số dòng bị xóa
+        // số dòng bị xóa
     }
 }
